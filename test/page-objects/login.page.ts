@@ -19,6 +19,10 @@ class LoginPage extends Page {
     return $('//h1[normalize-space()="Login"]')
   }
 
+  get modalMessageLabel() {
+    return $('//p[@id="alert-dialog-description"]')
+  }
+
   /**Page actions */
 
   async enterLoginName(loginName: string) {
@@ -42,7 +46,7 @@ class LoginPage extends Page {
   async clickLoginBtn() {
     try {
       await this.loginBtn.scrollIntoView()
-      await this.click(await this.loginBtn);
+      await this.loginBtn.click();
     } catch (err) {
       err.message = `Error clicking button, ${err.message}`;
       throw err;
@@ -57,6 +61,10 @@ class LoginPage extends Page {
     } catch (err) {
       throw err;
     }
+  }
+
+  async getErrorMessage(){
+    await this.modalMessageLabel.getValue();
   }
 }
 export default new LoginPage();
