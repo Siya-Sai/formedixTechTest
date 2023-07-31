@@ -1,4 +1,4 @@
-# Automation Project README
+# Formedix Technical Test README
 
 ## Project Description
 
