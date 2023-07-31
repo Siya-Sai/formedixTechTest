@@ -12,19 +12,16 @@ This project is an example of automated end-to-end tests for the Ryze web applic
 ├── package.json
 ├── tsconfig.json
 ├── wdio.conf.js
-├── src
+├── test
+│   ├── features
+|   |   ├── TestCase.feature
 │   ├── pageobjects
 │   │   ├── login.page.ts
-│   │   ├── repository.page.ts
-│   │   ├── form.page.ts
-│   │   └── user.page.ts
+│   │   ├── landing.page.ts
+│   │   ├── page.ts
 │   └── steps
-│       ├── login.steps.ts
-│       ├── navigation.steps.ts
-│       ├── form.steps.ts
-│       └── logout.steps.ts
-└── features
-    └── ryzeAppTests.feature
+│       ├── TestCaseSteps.ts
+
 ```
 
 ## Tech Stack
