@@ -49,16 +49,15 @@ This project is an example of automated end-to-end tests for the Ryze web applic
 
 ## Running the tests
 
-1. To run the tests, use the command `npm test` in the root directory of the project.
+1. To run the tests, use the command `npx wdio run wdio.conf.ts` in the root directory of the project.
 2. Test results will be displayed in the terminal.
 
 ## Features Tested
 
 1. Login to the application with the provided credentials.
 2. Navigation in the 'Repository->Studies' section.
-3. User actions involving viewing and editing a form.
-4. Confirmation of user updates.
-5. Logout of the application.
+3. User actions involving viewing a form.
+
 
 ## Page Object Model
 
