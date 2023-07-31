@@ -6,17 +6,17 @@ class LoginPage extends Page {
     super();
   }
   /**Page objects */
-  get loginNameInput() {
-    return $('//input[@id="Login Name - Login Form"]');
+  get usernameInput() {
+    return $('//input[@id="username"]');
   }
   get passwordInput() {
-    return $('//input[@id="Passowrd - Login Form"]');
+    return $('//input[@id="password"]');
   }
-  get loginBtn() {
-    return $('//span[@class="MuiButton-label button-label"]');
+  get signInButton() {
+    return $('//button[@id="btnSubmit"]');
   }
-  get loginLabel() {
-    return $('//h1[normalize-space()="Login"]')
+  get signInLabel() {
+    return $('//h1[normalize-space()="Sign in"]')
   }
 
   get modalMessageLabel() {
@@ -25,11 +25,11 @@ class LoginPage extends Page {
 
   /**Page actions */
 
-  async enterLoginName(loginName: string) {
+  async enterUsername(username: string) {
     try {
-      await this.typeInto(await this.loginNameInput, loginName);
+      await this.typeInto(await this.usernameInput, username);
     } catch (err) {
-      err.message = `Error entering login name: ${loginName}, ${err.message}`;
+      err.message = `Error entering login name: ${username}, ${err.message}`;
       throw err;
     }
   }
@@ -43,21 +43,21 @@ class LoginPage extends Page {
     }
   }
 
-  async clickLoginBtn() {
+  async clicksignInBtn() {
     try {
-      await this.loginBtn.scrollIntoView()
-      await this.loginBtn.click();
+      await this.signInButton.scrollIntoView()
+      await this.signInButton.click();
     } catch (err) {
       err.message = `Error clicking button, ${err.message}`;
       throw err;
     }
   }
 
-  async loginToBingoLine(loginName: string, password: string) {
+  async signInToRyze(loginName: string, password: string) {
     try {
-      await this.enterLoginName(loginName);
+      await this.enterUsername(loginName);
       await this.enterPassword(password);
-      await this.clickLoginBtn();
+      await this.clicksignInBtn();
     } catch (err) {
       throw err;
     }

@@ -6,7 +6,7 @@ export default class Page {
     }
 
     /**All reusable web functions */
-    async navigateTo(path: string) {
+    async open(path: string) {
         await browser.url(path)
         await browser.maximizeWindow()
     }
