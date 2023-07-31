@@ -67,6 +67,3 @@ This project uses the Page Object Model design for organizing and structuring th
 ## Author
 
 Siyabonga Mhlanga
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
